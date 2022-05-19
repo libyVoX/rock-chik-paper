@@ -1,0 +1,23 @@
+body{
+    margin:0;
+    padding:0;
+    background-color: beige;
+}
+
+.choice-player-1, .choice-player-2{
+    height: 200px;
+    width: 200px;
+    background-image: url(no.png);
+    background-size: 100% 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.p1, .p2{
+    transition: 1s;
+}
+.p1{
+    background: lime;
+}
+.p2{
+    background: gray;
+}
