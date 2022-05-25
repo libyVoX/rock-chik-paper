@@ -45,6 +45,17 @@ function bot(){
 function res2(){
 	move.innerHTML = 'Бот выбрал: ' + choice2
 }
+function another(){
+	if(player1 == false && player2 == true){
+	setTimeout(bot, 2000)
+	}
+	if(player1 == false && player2 == false){
+		clearInterval(int)
+		move.innerHTML = 'Ты выбрал: ' + choice1
+		setTimeout(res2, 2000)
+		setTimeout(results, 4000)
+	}
+}
 document.addEventListener('keydown', function(arg){
 	if(player1 == true && player2 == false){
 		if(arg.code == 'KeyA'){
@@ -78,12 +89,5 @@ document.addEventListener('keydown', function(arg){
 			alert('Не та кнопка')
 		}
 	}
-	else if(player1 == false && player2 == true){
-		setTimeout(bot, 2000)
-	}
-	if(player1 == false && player2 == false){
-		move.innerHTML = 'Ты выбрал: ' + choice1
-		setTimeout(res2, 2000)
-		setTimeout(results, 4000)
-	}
 })
+let int = setInterval(another, 1)
